@@ -7,3 +7,12 @@ In the default state, a spinner shows its currently selected value. Touching the
 ## History
 
 
+## Methods and Attributes
+
+
+## The Code
+
+
+## The reference
+
+
