@@ -11,19 +11,63 @@ In the default state, a spinner shows its currently selected value. Touching the
 ## Methods and Attributes
 This is how spinner is wrapped to work
 
-java.lang.object **>** android.view.View **>** android.view.ViewGroup **>** android.widget.AdapterView<android.widget.SpinnerAdapter> **>** android.widget.AbsSpinner **>** Android.widget.Spinner
+Spinner
+public class Spinner 
+extends AbsSpinner implements DialogInterface.OnClickListener
 
+java.lang.Object
+   ↳	android.view.View
+ 	   ↳	android.view.ViewGroup
+ 	 	   ↳	android.widget.AdapterView<android.widget.SpinnerAdapter>
+ 	 	 	   ↳	android.widget.AbsSpinner
+ 	 	 	 	   ↳	android.widget.Spinner
 
+ ### Methods used to implement spinner
+(Major inherited methods)
+- From class android.widget.AbsSpinner
+- From class android.widget.AdapterView
+- From class android.view.ViewGroup
+- From class android.view.View
+- From class java.lang.Object
+- From interface android.view.ViewParent
+- From interface android.view.ViewManager
+- From interface android.graphics.drawable.Drawable.Callback
+- From interface android.view.KeyEvent.Callback
+- From interface android.view.accessibility.AccessibilityEventSource
+- From interface android.content.DialogInterface.OnClickListener
+
+Some other methods used:-
+- onDetachedFromWindow()
+- onLayout(boolean changed, int l, int t, int r, int b)
+- onMeasure(int widthMeasureSpec, int heightMeasureSpec)
+
+### Attributes used to implement spinner
+( Major Inherited XML attributes)
+-From class android.widget.AbsSpinner
+-From class android.view.ViewGroup
+-From class android.view.View
+
+Some other attributes:-
+- android:dropDownHorizontalOffset
+- android:dropDownSelector
+- android:dropDownVerticalOffset
+- android:dropDownWidth
+- android:gravity
+- android:popupBackground
+- android:prompt
+- android:spinnerMode
 
 ## The Code
-In my case i have added 2 spinners(spinner1 and spinner2), one has a list of flowers and other has a list of colours.
+We will create an android application that consists of a simple spinner that allows selecting an item from a drop down list. We will display static data in the spinner. Selecting an item from spinner would display a toast message.
+This example has two spinners(spinner1 and spinner2), one has a list of flowers and other has a list of colours.
 
-spinner1:- spinner1 is taking a list of flowers from string.xml and implementing it in MainActivity.java using a java class CustomOnItemSelectedListener.java 
+spinner1:- spinner1 is taking a list of flowers from string.xml and implementing it in MainActivity.java using a java class "CustomOnItemSelectedListener.java" 
 
 Spinner2:- In this case, list and function both are included in  MainActivity.java
-These are two different ways to add and implement a spinner.
 The one used for spinner2 is more preferable.
 In Spinner2, ArrayAdapter helps to show a ArrayList of objects into view items loaded into the list view container.
+
+These two spinners have same function but they are added and implemented in different ways.
 
  **MainActivity.java**
  ```
