@@ -4,10 +4,15 @@
 Spinner is used to dispaly the multiple options to the user from which the user can select only one option. It is like a drop down menu with multiple values from which the end user can select only one value.
 In the default state, a spinner shows its currently selected value. Touching the spinner displays a dropdown menu with all other available values, from which a user can select a new one. 
 
+
 ## History
 
 
 ## Methods and Attributes
+This is how spinner is wrapped to work
+
+java.lang.object **>** android.view.View **>** android.view.ViewGroup **>** android.widget.AdapterView<android.widget.SpinnerAdapter> **>** android.widget.AbsSpinner **>** Android.widget.Spinner
+
 
 
 ## The Code
@@ -202,5 +207,11 @@ public class CustomOnItemSelectedListener implements OnItemSelectedListener {
 
 
 ## The reference
+
+https://www.javatpoint.com
+
+https://developer.android.com
+
+https://www.tutorialspoint.com
 
 
