@@ -15,9 +15,10 @@ Spinner
 public class Spinner 
 extends AbsSpinner implements DialogInterface.OnClickListener
 
-java.lang.Object
 
-   ↳	android.view.View
+   java.lang.Object
+    
+    ↳	android.view.View
    
  	   ↳	android.view.ViewGroup
       
