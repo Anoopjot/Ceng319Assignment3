@@ -4,9 +4,6 @@
 A Spinner is a control/widget, used to display the multiple options to the user from which the user can select only one option. It is like a drop down menu with multiple values from which the end user can select only one value.
 In the default state, a spinner shows its currently selected value. Touching the spinner displays a dropdown menu with all other available values, from which a user can select a new one or in complicated sentense, we can say, When it is inactive, it displays a single value. When activated, it displays (drops down) a list of values, from which the user may select one. When the user selects a new value, the control reverts to its inactive state, displaying the selected value.It is often used in the design of graphical user interface.
 
-## History
-
-
 ## Methods and Attributes
 This is how spinner is wrapped to work
 
@@ -62,17 +59,29 @@ Some other attributes:-
 - android:prompt
 - android:spinnerMode
 
+For more infomation on Methods and Attributes [FollowThisLink]https://developer.android.com/reference/android/widget/Spinner
+
+
+## How spinner works
+This explains the functionality of spinner, how it works:
+Providing the spinner with choices:-The choices can come from any source, but should be provided or added through spinnerAdapter such as ArrayAdapter, if the choices are available in Array and CursorAdapter, if the choices are available from database query or we can use string Array defined in string resource file , if the choices are pre-determined.
+
+Suppling the Array to spinner:- we can supply the array to spinner using ArrayAdapter( ArrayAdapter helps to show a ArrayList of objects into view items loaded into the list view container),For this, First we need to create the ArrayAdapter from string Array, then we need to decide how the selected item should appear in the spinner control, and the simple_spinner_item is the default layout, then in next step we need to call setDropDownViewResource() to specify the layout for drop down list, when it shows the avilable choices, then at last apply the adapter to the spinner.
+
+Responding to user selections:-when the item is selected from drop down menu, it implements "AdpterView.OnItemSelectedListener" interface , which has two call back methods onItemSelected() and onNothingSelected(). 
+
 ## The Code
 We will create an android application that consists of a simple spinner that allows selecting an item from a drop down list. We will display static data in the spinner. Selecting an item from spinner would display a toast message.
 This example has two spinners(spinner1 and spinner2), one has a list of flowers and other has a list of colours.
 
-spinner1:- spinner1 is taking a list of flowers from string.xml and implementing it in MainActivity.java using a java class "CustomOnItemSelectedListener.java" 
+spinner1:- In spinner 1, the values are provided in string array in a resource file "string.xml" and implementing it in MainActivity.java using a java class "CustomOnItemSelectedListener.java" 
 
 Spinner2:- In this case, list and function both are included in  MainActivity.java
 The one used for spinner2 is more preferable.
-In Spinner2, ArrayAdapter helps to show a ArrayList of objects into view items loaded into the list view container.
 
-These two spinners have same function but they are added and implemented in different ways.
+These two spinners are same but they are added and implemented in little bit different ways
+
+
 
  **MainActivity.java**
  ```
@@ -87,7 +96,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
-//import android.app.Activity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -126,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //this is for implementation of sppinner1
+    //this is for implementation of spinner
     public void addListenerOnSpinnerItemSelection() {
         spinner1 = (Spinner) findViewById(R.id.spinner1);
         spinner1.setOnItemSelectedListener(new CustomOnItemSelectedListener());
@@ -223,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
 </resources>
 
 ```
-**CustomOnItemSelectedListener.java** used for spinner1 only
+**CustomOnItemSelectedListener.java** 
 ```
 package com.example.n01204447.spinner;
 import android.view.View;
@@ -238,7 +246,7 @@ public class CustomOnItemSelectedListener implements OnItemSelectedListener {
 
         //showing selected spinner item
         Toast.makeText(parent.getContext(),
-                "OnItemSelectedListener : " + parent.getItemAtPosition(pos).toString(),    //retrieving an item from spinner1
+                "OnItemSelectedListener : " + parent.getItemAtPosition(pos).toString(),    //retrieving an item from spinner
                 Toast.LENGTH_SHORT).show();
     }
 
