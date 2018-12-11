@@ -258,8 +258,11 @@ public class CustomOnItemSelectedListener implements OnItemSelectedListener {
 
 }
 ```
-#Output
-![firstscreen](https://user-images.githubusercontent.com/43186746/49681816-32ca3e00-fa76-11e8-84a5-5b7e472f21d5.PNG)![spinner1dropdown](https://user-images.githubusercontent.com/43186746/49681819-3958b580-fa76-11e8-8221-96bfbb135ab2.PNG)![spinner2dropdown](https://user-images.githubusercontent.com/43186746/49681823-3e1d6980-fa76-11e8-82da-53dec5325ee6.PNG)![displayingresult](https://user-images.githubusercontent.com/43186746/49681826-42498700-fa76-11e8-902c-232eb3949971.PNG)
+# Output
+
+![firstscreen](https://user-images.githubusercontent.com/43186746/49681816-32ca3e00-fa76-11e8-84a5-5b7e472f21d5.PNG)![spinner1dropdown](https://user-images.githubusercontent.com/43186746/49681819-3958b580-fa76-11e8-8221-96bfbb135ab2.PNG)
+
+![spinner2dropdown](https://user-images.githubusercontent.com/43186746/49681823-3e1d6980-fa76-11e8-82da-53dec5325ee6.PNG)![displayingresult](https://user-images.githubusercontent.com/43186746/49681826-42498700-fa76-11e8-902c-232eb3949971.PNG)
 
 
 
