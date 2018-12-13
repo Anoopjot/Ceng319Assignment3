@@ -4,6 +4,9 @@
 A Spinner is a control/widget, used to display the multiple options to the user from which the user can select only one option. It is like a drop down menu with multiple values from which the end user can select only one value.
 In the default state, a spinner shows its currently selected value. Touching the spinner displays a dropdown menu with all other available values, from which a user can select a new one or in complicated sentense, we can say, When it is inactive, it displays a single value. When activated, it displays (drops down) a list of values, from which the user may select one. When the user selects a new value, the control reverts to its inactive state, displaying the selected value.It is often used in the design of graphical user interface.
 
+## History
+In 2009,in version 2.0-2.1, level 5-7, Enclair, some of the Android Applications were improved and some new were added to Android,In that, in Adroid App Widgets,further in Control Widgets spinner was used, at that time, the level of user interface was updated. 
+
 ## Methods and Attributes
 This is how spinner is wrapped to work
 
