@@ -1,0 +1,19 @@
+
+<resources>
+
+    <string name="app_name">spinner</string>
+
+        <string name="flower_prompt">choose a flower</string>
+
+        <string-array name="flower_arrays">
+
+            <item>Rose</item>
+            <item>Lily</item>
+            <item>Sun Flower</item>
+            <item>Tulip</item>
+            <item>Daffodil</item>
+            <item>Daisy</item>
+
+        </string-array>
+
+</resources>
